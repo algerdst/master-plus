@@ -5,21 +5,21 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-# headers = {
-#     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-# }
-#
-# filename=input("Введите имя файла в формате 'имя файла.xml'")
-#
-# print('[+][+][+]СБОР ССЫЛОК[+][+][+]')
-# #Сбор ссылок
-# with open(filename, 'r') as file:
-#     soup = BeautifulSoup(file, 'lxml')
-#     urls=soup.findAll('url')
-#     set_links=[]
-#     for url in urls:
-#         link=url.find('loc').text
-#         set_links.append(link)
+headers = {
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+}
+
+filename=input("Введите имя файла в формате 'имя файла.xml'")
+
+print('[+][+][+]СБОР ССЫЛОК[+][+][+]')
+#Сбор ссылок
+with open(filename, 'r') as file:
+    soup = BeautifulSoup(file, 'lxml')
+    urls=soup.findAll('url')
+    set_links=[]
+    for url in urls:
+        link=url.find('loc').text
+        set_links.append(link)
 
 
 links_quantity = len(set_links)
