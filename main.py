@@ -100,5 +100,4 @@ for url in set_links:
         with open('fail.txt', 'a', encoding='utf-8') as file:
             file.write(f'Ошибка на ссылке {url}\n')
         fails_count += 1
-        print(f'Найдена ошибка номер {fails_count}')
         continue
